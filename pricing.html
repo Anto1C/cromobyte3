@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prezzi — Cromobyte</title>
+  <meta name="description" content="Piani chiari e trasparenti. Scegli il pacchetto giusto per il tuo sito web. Nessun costo nascosto." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="main-nav scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="Logo.png.png" alt="Cromobyte" height="50">
+    </a>
+    <div class="nav-links-group">
+      <div class="nav-links">
+        <a href="index.html#chi-siamo">Chi Siamo</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="pricing.html" class="active">Prezzi</a>
+        <a href="index.html#processo">Processo</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+      <a href="contatti.html" class="nav-cta">Richiedi Preventivo</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#chi-siamo">Chi Siamo</a>
+    <a href="index.html#servizi">Servizi</a>
+    <a href="pricing.html">Prezzi</a>
+    <a href="index.html#processo">Processo</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="contatti.html" style="color:#00f0ff;font-weight:700;">Richiedi Preventivo</a>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-label">Prezzi Trasparenti</div>
+  <h1>Scegli il piano <span class="accent">giusto per te</span></h1>
+  <p>Nessun costo nascosto. 50% alla firma, 50% alla consegna.</p>
+</div>
+
+<!-- ─── PIANI ─── -->
+<section class="section">
+  <div class="section-inner" style="max-width:1200px;">
+
+    <!-- Pricing cards -->
+    <div class="pricing-cards">
+
+      <!-- Starter -->
+      <div class="pricing-card animate-in">
+        <p class="plan-name">Starter</p>
+        <div class="plan-price-row">
+          <span class="plan-price">€790</span>
+          <span class="plan-period">una tantum</span>
+        </div>
+        <p class="plan-desc">Perfetto per chi parte da zero</p>
+        <ul class="plan-features">
+          <li>Sito 3–5 pagine responsive</li>
+          <li>Design moderno e personalizzato</li>
+          <li>Form di contatto funzionante</li>
+          <li>Ottimizzazione SEO base</li>
+          <li>Velocità PageSpeed 90+</li>
+          <li>Certificato SSL (HTTPS)</li>
+          <li>Privacy Policy GDPR completa</li>
+          <li>Consegna in 7 giorni lavorativi</li>
+        </ul>
+        <a href="contatti.html" class="plan-cta secondary" style="display:block;text-align:center;text-decoration:none;line-height:1;">Inizia Ora</a>
+      </div>
+
+      <!-- Business (popular) -->
+      <div class="pricing-card popular animate-in">
+        <div class="popular-badge">POPOLARE</div>
+        <p class="plan-name">Business</p>
+        <div class="plan-price-row">
+          <span class="plan-price">€1.190</span>
+          <span class="plan-period">una tantum</span>
+        </div>
+        <p class="plan-desc">Il più scelto dai nostri clienti</p>
+        <ul class="plan-features">
+          <li>Tutto dello Starter, più:</li>
+          <li>Sito 5–8 pagine</li>
+          <li>CMS per modifiche autonome</li>
+          <li>Blog / Sezione News</li>
+          <li>Google My Business ottimizzato</li>
+          <li>Integrazione WhatsApp Business</li>
+          <li>Google Analytics configurato</li>
+          <li>2 round di revisioni incluse</li>
+        </ul>
+        <a href="contatti.html" class="plan-cta primary" style="display:block;text-align:center;text-decoration:none;line-height:1;">Scegli Business</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="pricing-card animate-in">
+        <p class="plan-name">Enterprise</p>
+        <div class="plan-price-row">
+          <span class="plan-price" style="font-size:36px;">Su Preventivo</span>
+        </div>
+        <p class="plan-desc">Per progetti ambiziosi e strutture complesse</p>
+        <ul class="plan-features">
+          <li>Tutto del Business, più:</li>
+          <li>Architettura su misura (pagine illimitate)</li>
+          <li>E-commerce o portale prenotazioni</li>
+          <li>Sito multilingua (IT + EN + altre)</li>
+          <li>Integrazioni CRM / gestionali</li>
+          <li>Dashboard analytics avanzata</li>
+          <li>Supporto dedicato &amp; SLA garantito</li>
+          <li>Revisioni illimitate fino all'approvazione</li>
+        </ul>
+        <a href="contatti.html" class="plan-cta secondary" style="display:block;text-align:center;text-decoration:none;line-height:1;">Richiedi Preventivo</a>
+      </div>
+    </div>
+
+    <!-- Payment note -->
+    <div style="text-align:center;margin-bottom:80px;">
+      <div style="display:inline-flex;align-items:center;gap:12px;padding:12px 24px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span style="font-size:14px;color:#888;">50% alla firma del contratto — 50% alla consegna approvata. Nessuna sorpresa.</span>
+      </div>
+    </div>
+
+    <!-- Maintenance section -->
+    <div class="section-head">
+      <h2 class="section-title" style="font-size:clamp(22px,3vw,28px);margin-bottom:8px;">Piani Manutenzione</h2>
+      <p style="font-size:14px;color:#888;">Hosting, aggiornamenti e supporto continuo. Disdici quando vuoi.</p>
+    </div>
+
+    <div class="maint-grid">
+      <div class="maint-card animate-in">
+        <p class="maint-name">Base</p>
+        <div class="maint-price-row">
+          <span class="maint-price">€10</span>
+          <span class="maint-period">/mese</span>
+        </div>
+        <ul class="maint-features">
+          <li>Hosting &amp; dominio</li>
+          <li>Backup settimanali</li>
+          <li>Aggiornamenti sicurezza</li>
+          <li>Supporto email</li>
+        </ul>
+      </div>
+      <div class="maint-card animate-in">
+        <p class="maint-name">Pro</p>
+        <div class="maint-price-row">
+          <span class="maint-price">€15</span>
+          <span class="maint-period">/mese</span>
+        </div>
+        <ul class="maint-features">
+          <li>Tutto del Base</li>
+          <li>Modifiche mensili illimitate</li>
+          <li>Report analytics mensile</li>
+          <li>Supporto WhatsApp prioritario</li>
+        </ul>
+      </div>
+      <div class="maint-card animate-in">
+        <p class="maint-name">Crescita</p>
+        <div class="maint-price-row">
+          <span class="maint-price" style="font-size:22px;line-height:1.4;">Da decidere</span>
+        </div>
+        <ul class="maint-features">
+          <li>Tutto del Pro</li>
+          <li>SEO continuativo</li>
+          <li>Gestione Google My Business</li>
+          <li>Strategia digitale mensile</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COMPARE TABLE ─── -->
+<section class="section section-alt">
+  <div class="section-inner-sm">
+    <div class="section-head">
+      <p class="section-label">Confronto Piani</p>
+      <h2 class="section-title" style="font-size:clamp(24px,3vw,32px);">Cosa è incluso in ogni piano</h2>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:14px 16px;color:#888;font-weight:500;border-bottom:1px solid rgba(255,255,255,.08);">Funzionalità</th>
+            <th style="text-align:center;padding:14px 16px;color:#00f0ff;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);">Starter</th>
+            <th style="text-align:center;padding:14px 16px;color:#00f0ff;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(0,240,255,.04);">Business</th>
+            <th style="text-align:center;padding:14px 16px;color:#00f0ff;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">Sito responsive</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">SSL / HTTPS</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">PageSpeed 90+</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">CMS autonomo</td><td style="text-align:center;color:#555;border-bottom:1px solid rgba(255,255,255,.04);">—</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">Google My Business</td><td style="text-align:center;color:#555;border-bottom:1px solid rgba(255,255,255,.04);">—</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">WhatsApp Business</td><td style="text-align:center;color:#555;border-bottom:1px solid rgba(255,255,255,.04);">—</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">✓</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">Prenotazioni online</td><td style="text-align:center;color:#555;border-bottom:1px solid rgba(255,255,255,.04);">—</td><td style="text-align:center;color:#555;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">—</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;border-bottom:1px solid rgba(255,255,255,.04);">Menù digitale QR</td><td style="text-align:center;color:#555;border-bottom:1px solid rgba(255,255,255,.04);">—</td><td style="text-align:center;color:#555;border-bottom:1px solid rgba(255,255,255,.04);background:rgba(0,240,255,.02);">—</td><td style="text-align:center;color:#00f0ff;border-bottom:1px solid rgba(255,255,255,.04);">✓</td></tr>
+          <tr><td style="padding:12px 16px;color:#bbb;">Sito multilingua</td><td style="text-align:center;color:#555;">—</td><td style="text-align:center;color:#555;background:rgba(0,240,255,.02);">—</td><td style="text-align:center;color:#00f0ff;">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="section">
+  <div class="cta-box">
+    <h2>Non sai quale piano <span class="accent">scegliere?</span></h2>
+    <p>Parliamoci 30 minuti — ti aiutiamo a capire cosa ti serve davvero per la tua attività, senza impegno.</p>
+    <a href="contatti.html" class="btn-primary">Richiedi un Preventivo Gratuito →</a>
+  </div>
+</section>
+
+<!-- ─── DATI AZIENDALI ─── -->
+<div class="dati-section">
+  <div class="dati-inner">
+    <h3>Dati Aziendali</h3>
+    <div>
+      <p><strong>Cromobyte</strong></p>
+      <p>Titolare: [NOME_COGNOME]</p>
+      <p>Sede: [INDIRIZZO]</p>
+      <p>P.IVA: [P_IVA]</p>
+      <p>Codice Fiscale: [CODICE_FISCALE]</p>
+      <p>PEC: [PEC]</p>
+      <p>Email: [EMAIL]</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="Logo.png.png" alt="Cromobyte" height="39">
+      </a>
+      <div class="footer-links">
+        <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Privacy Policy</a>
+        <a href="#" onclick="manageCookies();return false;">Gestisci Cookie</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Cromobyte — P.IVA [P_IVA]</p>
+      <p>Questo sito utilizza cookie tecnici e, previo consenso, analitici. <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Info</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── COOKIE BANNER ─── -->
+<div class="cookie-banner" id="cookieBanner" style="display:none;">
+  <div class="cookie-inner">
+    <p class="cookie-title">Questo sito utilizza i cookie</p>
+    <p class="cookie-text">Utilizziamo cookie per migliorare la tua esperienza. <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Privacy Policy</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-btn reject" onclick="saveCookies({necessary:true,analytics:false,marketing:false})">Rifiuta tutti</button>
+      <button class="cookie-btn custom" onclick="document.getElementById('privacyModal').classList.add('open')">Personalizza</button>
+      <button class="cookie-btn accept" onclick="saveCookies({necessary:true,analytics:true,marketing:true})">Accetta tutti</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PRIVACY MODAL ─── -->
+<div class="modal-overlay" id="privacyModal" onclick="this.classList.remove('open')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="document.getElementById('privacyModal').classList.remove('open')">✕</button>
+    <h2>Privacy Policy</h2>
+    <p><em>Ultimo aggiornamento: [DATA_AGGIORNAMENTO]</em></p>
+    <h3>1. Titolare del Trattamento</h3>
+    <p><strong>[NOME_AZIENDA]</strong><br/>Sede legale: [INDIRIZZO]<br/>P.IVA: [P_IVA]<br/>Email: [EMAIL_PRIVACY]</p>
+    <h3>2. Dati Raccolti</h3>
+    <p>Dati di navigazione, dati forniti tramite form di contatto, cookie tecnici e, previo consenso, cookie analitici e di marketing.</p>
+    <h3>3. Cookie</h3>
+    <table class="privacy-table">
+      <thead><tr><th>Cookie</th><th>Tipo</th><th>Durata</th></tr></thead>
+      <tbody>
+        <tr><td>cromobyte_consent</td><td>Tecnico</td><td>180 giorni</td></tr>
+        <tr><td>_ga, _ga_*</td><td>Analitico</td><td>24 mesi</td></tr>
+      </tbody>
+    </table>
+    <h3>4. Diritti</h3>
+    <p>Ai sensi Art. 15-22 GDPR puoi esercitare i tuoi diritti scrivendo a [EMAIL_PRIVACY].</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+  // Navbar always scrolled on inner pages
+  document.getElementById('navbar').classList.add('scrolled');
+
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  function getCookie(name) {
+    const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (m) try { return JSON.parse(decodeURIComponent(m[2])); } catch { return null; }
+    return null;
+  }
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days * 86400000);
+    document.cookie = name + '=' + encodeURIComponent(JSON.stringify(value)) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function saveCookies(prefs) {
+    setCookie('cromobyte_consent', prefs, 180);
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  function manageCookies() {
+    setCookie('cromobyte_consent', null, -1);
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+  if (!getCookie('cromobyte_consent')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+
+  // Animate on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-in').forEach((el, i) => {
+    el.style.transitionDelay = (i % 3) * 120 + 'ms';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
