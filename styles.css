@@ -549,6 +549,18 @@ footer {
   transform: translate(0, -50%);
   max-width: 500px;
 }
+#beat-a.align-right {
+  text-align: left;
+  right: 3%;
+  max-width: 480px;
+}
+.beat-a-quote {
+  color: #ffffff;
+  font-size: clamp(18px, 2.4vw, 28px);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
 @media (max-width: 768px) {
   .scrolly-beat.align-left, .scrolly-beat.align-right {
     text-align: center;

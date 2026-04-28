@@ -19,8 +19,8 @@
       <img src="Logo.png.png" alt="Cromobyte" height="50">
     </a>
     <div class="nav-links-group">
-      <div class="nav-links">
-        <a href="index.html#chi-siamo" class="active">Chi Siamo</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#chi-siamo">Chi Siamo</a>
         <a href="index.html#servizi">Servizi</a>
         <a href="pricing.html">Prezzi</a>
         <a href="index.html#processo">Processo</a>
@@ -64,19 +64,12 @@
     <!-- Text Overlays -->
     <div class="scrolly-overlays">
       <!-- Beat A: Hero -->
-      <div class="scrolly-beat" id="beat-a">
-        <div class="page-hero-label" style="margin-bottom:28px;">⚡ 14 aziende già trasformate in 12 mesi</div>
-        <h1 class="hero-title">
-          Trasformiamo la tua<br />
-          <span class="accent-gradient">presenza digitale</span>
-        </h1>
-        <p class="hero-subtitle">
-          Siti web che portano clienti, non solo belle pagine. Dal primo contatto al lancio in 7 giorni. Veloci, belli, che convertono.
+      <div class="scrolly-beat align-right" id="beat-a">
+        <p class="beat-a-quote">
+          "Siti web che portano clienti,<br />
+          non solo belle pagine.<br />
+          Dal primo contatto al lancio in 7 giorni."
         </p>
-        <div class="hero-btns" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:40px;">
-          <a href="pricing.html" class="btn-primary">Vedi i Piani →</a>
-          <a href="#processo" class="btn-secondary" onclick="event.preventDefault();document.getElementById('processo').scrollIntoView({behavior:'smooth'})">Come Funziona</a>
-        </div>
       </div>
 
       <!-- Beat B: Features -->
@@ -586,31 +579,49 @@
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
 
+  // Active nav link — click + scroll tracking
+  (function() {
+    const links = document.querySelectorAll('#navLinks a');
+    const sectionIds = ['chi-siamo', 'servizi', 'processo', 'faq'];
+
+    function setActive(href) {
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === href));
+    }
+
+    links.forEach(a => {
+      a.addEventListener('click', () => setActive(a.getAttribute('href')));
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const match = Array.from(links).find(a => a.getAttribute('href') === 'index.html#' + entry.target.id);
+          if (match) setActive(match.getAttribute('href'));
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) sectionObserver.observe(el);
+    });
+  })();
+
   // Mobile menu
   document.getElementById('menuBtn').addEventListener('click', () => {
     document.getElementById('mobileMenu').classList.toggle('open');
   });
 
   // Cookie helpers
-  function getCookie(name) {
-    const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    if (m) try { return JSON.parse(decodeURIComponent(m[2])); } catch { return null; }
-    return null;
-  }
-  function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + days * 86400000);
-    document.cookie = name + '=' + encodeURIComponent(JSON.stringify(value)) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
-  }
   function saveCookies(prefs) {
-    setCookie('cromobyte_consent', prefs, 180);
+    localStorage.setItem('cromobyte_consent', JSON.stringify(prefs));
     document.getElementById('cookieBanner').style.display = 'none';
   }
   function manageCookies() {
-    setCookie('cromobyte_consent', null, -1);
+    localStorage.removeItem('cromobyte_consent');
     document.getElementById('cookieBanner').style.display = 'block';
   }
-  if (!getCookie('cromobyte_consent')) {
+  if (!localStorage.getItem('cromobyte_consent')) {
     document.getElementById('cookieBanner').style.display = 'block';
   }
 

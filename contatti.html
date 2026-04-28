@@ -333,25 +333,15 @@
     document.getElementById('mobileMenu').classList.toggle('open');
   });
 
-  function getCookie(name) {
-    const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    if (m) try { return JSON.parse(decodeURIComponent(m[2])); } catch { return null; }
-    return null;
-  }
-  function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + days * 86400000);
-    document.cookie = name + '=' + encodeURIComponent(JSON.stringify(value)) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
-  }
   function saveCookies(prefs) {
-    setCookie('cromobyte_consent', prefs, 180);
+    localStorage.setItem('cromobyte_consent', JSON.stringify(prefs));
     document.getElementById('cookieBanner').style.display = 'none';
   }
   function manageCookies() {
-    setCookie('cromobyte_consent', null, -1);
+    localStorage.removeItem('cromobyte_consent');
     document.getElementById('cookieBanner').style.display = 'block';
   }
-  if (!getCookie('cromobyte_consent')) {
+  if (!localStorage.getItem('cromobyte_consent')) {
     document.getElementById('cookieBanner').style.display = 'block';
   }
 
