@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richiedi un Preventivo — Cromobyte</title>
+  <meta name="description" content="Contattaci per un preventivo gratuito. Raccontaci della tua attività e ti rispondiamo entro 24 ore." />
+  <link rel="icon" type="image/png" href="Logo.png.png" />
+  <link rel="stylesheet" crossorigin href="/assets/styles-CmHSbugn.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="main-nav scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="Logo.png.png" alt="Cromobyte" height="50">
+    </a>
+    <div class="nav-links-group">
+      <div class="nav-links">
+        <a href="index.html#chi-siamo">Chi Siamo</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="pricing.html">Prezzi</a>
+        <a href="index.html#processo">Processo</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contatti.html" class="active">Contatti</a>
+      </div>
+      <a href="contatti.html" class="nav-cta">Richiedi Preventivo</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#chi-siamo">Chi Siamo</a>
+    <a href="index.html#servizi">Servizi</a>
+    <a href="pricing.html">Prezzi</a>
+    <a href="index.html#processo">Processo</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="contatti.html" style="color:#00f0ff;font-weight:700;">Richiedi Preventivo</a>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-label">Contatti</div>
+  <h1>Parliamoci <span class="accent">senza impegno</span></h1>
+  <p>Raccontaci della tua attività. Ti mostriamo cosa possiamo creare per te e ti rispondiamo entro 24 ore.</p>
+</div>
+
+<!-- ─── CONTACT SECTION ─── -->
+<section class="section">
+  <div class="section-inner-sm">
+    <div class="contact-grid">
+
+      <!-- Info col -->
+      <div class="contact-info animate-left">
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <!-- Mail icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="contact-item-label">Email</p>
+            <p class="contact-item-value">contatti@cromobyte.it</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <!-- Map pin icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="contact-item-label">Sede</p>
+            <p class="contact-item-value">Rivoli (TO)</p>
+          </div>
+        </div>
+
+        <!-- Trust badges -->
+        <div style="padding:20px 24px;border-radius:14px;background:rgba(0,240,255,.04);border:1px solid rgba(0,240,255,.1);">
+          <p style="font-size:13px;font-weight:600;color:#00f0ff;margin-bottom:12px;">Perché sceglierci</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#999;">
+              <span style="color:#00f0ff;">✓</span> Risposta garantita entro 24h
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#999;">
+              <span style="color:#00f0ff;">✓</span> Preventivo gratuito senza impegno
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#999;">
+              <span style="color:#00f0ff;">✓</span> Consulenza di 30 minuti inclusa
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#999;">
+              <span style="color:#00f0ff;">✓</span> 50% alla firma, 50% alla consegna
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form col -->
+      <div class="animate-right">
+        <div class="contact-form-wrap">
+
+          <div style="margin-bottom:8px;">
+            <h2 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:6px;">Richiedi un Preventivo</h2>
+            <p style="font-size:14px;color:#888;">Compila il modulo e ti contatteremo entro 24 ore.</p>
+          </div>
+
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" class="form-input" placeholder="Il tuo nome" required />
+            </div>
+
+            <div class="form-group">
+              <label for="cognome">Cognome</label>
+              <input type="text" id="cognome" name="cognome" class="form-input" placeholder="Il tuo cognome" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="nome@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Telefono</label>
+              <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+39 ..." />
+            </div>
+
+            <div class="form-group">
+              <label for="attivita">Tipo di attività</label>
+              <select id="attivita" name="attivita" class="form-input" style="appearance:none;cursor:pointer;">
+                <option value="" style="background:#1a1a24;">Seleziona...</option>
+                <option value="ristorante" style="background:#1a1a24;">Ristorante / Bar / Pizzeria</option>
+                <option value="negozio" style="background:#1a1a24;">Negozio / Retail</option>
+                <option value="servizi" style="background:#1a1a24;">Servizi professionali</option>
+                <option value="artigianato" style="background:#1a1a24;">Artigianato / Manifattura</option>
+                <option value="turismo" style="background:#1a1a24;">Turismo / Hospitality</option>
+                <option value="altro" style="background:#1a1a24;">Altro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="piano">Piano di interesse</label>
+              <select id="piano" name="piano" class="form-input" style="appearance:none;cursor:pointer;">
+                <option value="" style="background:#1a1a24;">Seleziona...</option>
+                <option value="starter" style="background:#1a1a24;">Starter — €790</option>
+                <option value="business" style="background:#1a1a24;">Business — €1.190</option>
+                <option value="enterprise" style="background:#1a1a24;">Enterprise — Su Preventivo</option>
+                <option value="non-so" style="background:#1a1a24;">Non so ancora, ho bisogno di consiglio</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="messaggio">Messaggio *</label>
+              <textarea id="messaggio" name="messaggio" class="form-input" rows="4" placeholder="Raccontaci della tua attività e cosa vorresti realizzare..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit" id="submitBtn">Invia Richiesta</button>
+
+            <p class="form-note">
+              Inviando accetti la nostra <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Privacy Policy</a>. Rispondiamo entro 24h.
+            </p>
+          </form>
+
+          <!-- Success message (hidden by default) -->
+          <div id="successMsg" style="display:none;text-align:center;padding:32px 16px;">
+            <div style="font-size:48px;margin-bottom:16px;">✓</div>
+            <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#00f0ff;margin-bottom:8px;">Messaggio inviato!</h3>
+            <p style="font-size:15px;color:#888;line-height:1.6;">Grazie per averci contattato. Ti risponderemo entro 24 ore lavorative.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOCIAL PROOF ─── -->
+<div class="proof-strip">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <div class="stars">★★★★★</div>
+    <p style="font-size:18px;color:#ccc;font-style:italic;line-height:1.6;max-width:600px;margin:0 auto 12px;">
+      "In 7 giorni avevamo un sito che i nostri clienti ci fanno i complimenti. Le prenotazioni online ci hanno cambiato la vita."
+    </p>
+    <p style="font-size:13px;color:#666;">— Ristorante cliente, Torino</p>
+  </div>
+</div>
+
+<!-- ─── FAQ RAPIDA ─── -->
+<section class="section section-alt">
+  <div class="section-inner-xs">
+    <div class="section-head">
+      <p class="section-label">Domande Frequenti</p>
+      <h2 class="section-title" style="font-size:clamp(24px,3vw,32px);">Risposte rapide</h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Devo pagare tutto subito?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>No. Chiediamo il 50% alla firma del contratto e il restante 50% alla consegna del sito approvato. Nessuna sorpresa.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Quanto tempo passa tra la richiesta e l'inizio dei lavori?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Di solito iniziamo entro 2–3 giorni dalla firma del contratto. Il processo completo dura 7 giorni per il piano Starter.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>La consulenza iniziale è davvero gratuita?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Assolutamente sì. 30 minuti di call in cui capiamo le tue esigenze e ti proponiamo la soluzione più adatta, senza alcun impegno.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="index.html#faq" style="font-size:14px;color:#00f0ff;text-decoration:none;">Vedi tutte le domande →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DATI AZIENDALI ─── -->
+<div class="dati-section">
+  <div class="dati-inner">
+    <h3>Dati Aziendali</h3>
+    <div>
+      <p><strong>Cromobyte</strong></p>
+      <p>Titolare: Antonio Corsello</p>
+      <p>Sede: Rivoli (TO)</p>
+      <p>Email: contatti@cromobyte.it</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="Logo.png.png" alt="Cromobyte" height="39">
+      </a>
+      <div class="footer-links">
+        <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Privacy Policy</a>
+        <a href="#" onclick="manageCookies();return false;">Gestisci Cookie</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Cromobyte</p>
+      <p>Questo sito utilizza cookie tecnici e, previo consenso, analitici. <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Info</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── COOKIE BANNER ─── -->
+<div class="cookie-banner" id="cookieBanner" style="display:none;">
+  <div class="cookie-inner">
+    <p class="cookie-title">Questo sito utilizza i cookie</p>
+    <p class="cookie-text">Utilizziamo cookie per migliorare la tua esperienza. <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Privacy Policy</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-btn reject" onclick="saveCookies({necessary:true,analytics:false,marketing:false})">Rifiuta tutti</button>
+      <button class="cookie-btn custom" onclick="document.getElementById('privacyModal').classList.add('open')">Personalizza</button>
+      <button class="cookie-btn accept" onclick="saveCookies({necessary:true,analytics:true,marketing:true})">Accetta tutti</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PRIVACY MODAL ─── -->
+<div class="modal-overlay" id="privacyModal" onclick="this.classList.remove('open')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="document.getElementById('privacyModal').classList.remove('open')">✕</button>
+    <h2>Privacy Policy</h2>
+    <h3>1. Titolare del Trattamento</h3>
+    <p><strong>Cromobyte</strong><br/>Sede legale: Rivoli (TO)<br/>Email: contatti@cromobyte.it</p>
+    <h3>2. Dati Raccolti</h3>
+    <p>Dati di navigazione, dati forniti tramite form di contatto, cookie tecnici e, previo consenso, cookie analitici e di marketing.</p>
+    <h3>3. Cookie</h3>
+    <table class="privacy-table">
+      <thead><tr><th>Cookie</th><th>Tipo</th><th>Durata</th></tr></thead>
+      <tbody>
+        <tr><td>cromobyte_consent</td><td>Tecnico</td><td>180 giorni</td></tr>
+        <tr><td>_ga, _ga_*</td><td>Analitico</td><td>24 mesi</td></tr>
+      </tbody>
+    </table>
+    <h3>4. Diritti</h3>
+    <p>Ai sensi Art. 15-22 GDPR puoi esercitare i tuoi diritti scrivendo a contatti@cromobyte.it.</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  document.getElementById('navbar').classList.add('scrolled');
+
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  function saveCookies(prefs) {
+    localStorage.setItem('cromobyte_consent', JSON.stringify(prefs));
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  function manageCookies() {
+    localStorage.removeItem('cromobyte_consent');
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+  if (!localStorage.getItem('cromobyte_consent')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+
+  // Form submission (demo — replace with real backend/formspree endpoint)
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Invio in corso...';
+    btn.disabled = true;
+    // Simulate async send — wire up to your real endpoint here
+    setTimeout(() => {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }, 1200);
+  }
+
+  // Animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-left, .animate-right').forEach(el => observer.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

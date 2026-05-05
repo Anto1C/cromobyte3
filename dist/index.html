@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cromobyte — Siti Web per PMI Italiane</title>
+  <meta name="description" content="Trasformiamo la tua presenza digitale. Siti web professionali in 7 giorni. Veloci, belli, che convertono." />
+  <link rel="icon" type="image/png" href="Logo.png.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="frame_000_delay-0.041s.jpg" />
+  <link rel="stylesheet" crossorigin href="/assets/styles-CmHSbugn.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="main-nav" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <!-- Logo icon -->
+      <img src="Logo.png.png" alt="Cromobyte" height="50">
+    </a>
+    <div class="nav-links-group">
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#chi-siamo">Chi Siamo</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="pricing.html">Prezzi</a>
+        <a href="index.html#processo">Processo</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+      <a href="contatti.html" class="nav-cta">Richiedi Preventivo</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#chi-siamo">Chi Siamo</a>
+    <a href="index.html#servizi">Servizi</a>
+    <a href="pricing.html">Prezzi</a>
+    <a href="index.html#processo">Processo</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="contatti.html" style="color:#00f0ff;font-weight:700;">Richiedi Preventivo</a>
+  </div>
+</nav>
+
+<!-- ─── SCROLLYTELLING HERO ─── -->
+<section id="scrolly-hero" class="scrolly-hero">
+  <div class="scrolly-sticky">
+    <canvas id="scrolly-canvas"></canvas>
+    
+    <!-- Loading Overlay -->
+    <div id="scrolly-loader" class="scrolly-loader">
+      <div class="spinner"></div>
+      <div class="progress-bar-container">
+        <div id="scrolly-progress" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div id="scrolly-indicator" class="scrolly-indicator">
+      <span>Scroll to Explore</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+
+    <!-- Text Overlays -->
+    <div class="scrolly-overlays">
+      <!-- Beat A: Hero -->
+      <div class="scrolly-beat align-right" id="beat-a">
+        <p class="beat-a-quote">
+          "Siti web che portano clienti,<br />
+          non solo belle pagine.<br />
+          Dal primo contatto al lancio in 7 giorni."
+        </p>
+      </div>
+
+      <!-- Beat B: Features -->
+      <div class="scrolly-beat align-left" id="beat-b">
+        <h2 class="beat-title">Progettato per <span class="accent">Convertire</span></h2>
+        <p class="beat-text">Caricamenti fulminei, design responsive impeccabile e SEO integrata nativamente nel codice.</p>
+      </div>
+
+      <!-- Beat C: Testimonials -->
+      <div class="scrolly-beat align-right" id="beat-c">
+        <h2 class="beat-title">Scelto dalle <span class="accent">PMI Italiane</span></h2>
+        <div class="stars" style="justify-content:flex-end;">★★★★★</div>
+        <p class="beat-quote">"In 7 giorni avevamo un sito che i nostri clienti ci fanno i complimenti. Le prenotazioni online ci hanno cambiato la vita."</p>
+        <p class="beat-attr">— Ristorante cliente, Torino</p>
+      </div>
+
+      <!-- Beat D: CTA -->
+      <div class="scrolly-beat" id="beat-d">
+        <h2 class="beat-title">Prendi il <span class="accent">Controllo Digitale</span></h2>
+        <p class="beat-text" style="margin-bottom: 30px;">Trasforma il tuo brand oggi. Scopri i nostri piani e inizia a convertire.</p>
+        <a href="pricing.html" class="btn-primary cta-glow">Vedi i Piani →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS BAR ─── -->
+<div class="stats-bar">
+  <div class="stats-inner" id="statsBar">
+    <div class="stat-item">
+      <div class="stat-value" data-target="14">0</div>
+      <div class="stat-label">Clienti attivi</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" data-target="98" data-suffix="%">0%</div>
+      <div class="stat-label">Soddisfazione</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" data-target="7" data-suffix="gg">0gg</div>
+      <div class="stat-label">Giorni medi consegna</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" data-target="95" data-suffix="+">0+</div>
+      <div class="stat-label">PageSpeed medio</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CHI SIAMO ─── -->
+<section id="chi-siamo" class="section" style="position:relative;overflow:hidden;">
+  <canvas id="chiSiamoCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0.65;pointer-events:none;"></canvas>
+  <div class="section-inner">
+    <div class="chi-siamo-grid" style="display:flex;gap:60px;align-items:center;flex-wrap:wrap;">
+
+      <!-- text col -->
+      <div style="flex:1 1 400px;" class="animate-left">
+        <p class="section-label">La Nostra Storia</p>
+        <h2 class="section-title" style="margin-bottom:20px;">
+          Un anno di crescita<br /><span class="accent">esponenziale</span>
+        </h2>
+        <p style="font-size:16px;color:#888;line-height:1.7;margin-bottom:16px;">
+          Siamo partiti 12 mesi fa con un'idea chiara: le PMI italiane meritano siti web che funzionano davvero. Non vetrine digitali che nessuno trova, ma strumenti che portano clienti.
+        </p>
+        <p style="font-size:16px;color:#888;line-height:1.7;margin-bottom:24px;">
+          In un anno siamo passati da 0 a 14 clienti attivi, con un tasso di soddisfazione del 98%. Ogni sito che consegniamo genera risultati misurabili — e ogni cliente soddisfatto ce ne porta un altro.
+        </p>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;">
+          <div style="padding:16px 24px;border-radius:14px;background:rgba(0,240,255,.05);border:1px solid rgba(0,240,255,.12);">
+            <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#00f0ff;">14</div>
+            <div style="font-size:12px;color:#888;margin-top:2px;">Clienti attivi</div>
+          </div>
+          <div style="padding:16px 24px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);">
+            <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#e8e8f0;">0→14</div>
+            <div style="font-size:12px;color:#888;margin-top:2px;">In 12 mesi</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- chart col -->
+      <div style="flex:1 1 440px;" class="animate-right">
+        <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:28px 20px 16px;">
+          <p style="font-size:13px;font-weight:600;color:#888;margin-bottom:16px;padding-left:12px;">Crescita clienti — Mag 2025 → Apr 2026</p>
+          <!-- SVG area chart -->
+          <svg viewBox="0 0 560 280" width="100%" style="display:block;" aria-label="Grafico crescita clienti">
+            <defs>
+              <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.28"/>
+                <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Y axis labels -->
+            <text x="4" y="262" fill="#555" font-size="10" font-family="sans-serif">0</text>
+            <text x="4" y="198" fill="#555" font-size="10" font-family="sans-serif">4</text>
+            <text x="4" y="134" fill="#555" font-size="10" font-family="sans-serif">8</text>
+            <text x="4" y="70"  fill="#555" font-size="10" font-family="sans-serif">12</text>
+            <!-- Grid lines -->
+            <line x1="30" y1="260" x2="554" y2="260" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+            <line x1="30" y1="196" x2="554" y2="196" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+            <line x1="30" y1="132" x2="554" y2="132" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+            <line x1="30" y1="68"  x2="554" y2="68"  stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+            <!-- Area fill -->
+            <path d="M30,260 L78,244 L126,228 L174,211 L222,195 L270,179 L318,146 L366,114 L414,98 L462,81 L510,49 L554,33 L554,260 L30,260 Z" fill="url(#chartGrad)"/>
+            <!-- Line -->
+            <polyline points="30,260 78,244 126,228 174,211 222,195 270,179 318,146 366,114 414,98 462,81 510,49 554,33" fill="none" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Dots -->
+            <circle cx="30"  cy="260" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="78"  cy="244" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="126" cy="228" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="174" cy="211" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="222" cy="195" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="270" cy="179" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="318" cy="146" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="366" cy="114" r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="414" cy="98"  r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="462" cy="81"  r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="510" cy="49"  r="4" fill="#0a0a0f" stroke="#00f0ff" stroke-width="2"/>
+            <circle cx="554" cy="33"  r="6" fill="#00f0ff"/>
+            <!-- X axis labels -->
+            <text x="22"  y="276" fill="#555" font-size="9" font-family="sans-serif">Mag</text>
+            <text x="70"  y="276" fill="#555" font-size="9" font-family="sans-serif">Giu</text>
+            <text x="118" y="276" fill="#555" font-size="9" font-family="sans-serif">Lug</text>
+            <text x="166" y="276" fill="#555" font-size="9" font-family="sans-serif">Ago</text>
+            <text x="214" y="276" fill="#555" font-size="9" font-family="sans-serif">Set</text>
+            <text x="262" y="276" fill="#555" font-size="9" font-family="sans-serif">Ott</text>
+            <text x="310" y="276" fill="#555" font-size="9" font-family="sans-serif">Nov</text>
+            <text x="358" y="276" fill="#555" font-size="9" font-family="sans-serif">Dic</text>
+            <text x="404" y="276" fill="#555" font-size="9" font-family="sans-serif">Gen</text>
+            <text x="452" y="276" fill="#555" font-size="9" font-family="sans-serif">Feb</text>
+            <text x="500" y="276" fill="#555" font-size="9" font-family="sans-serif">Mar</text>
+            <text x="544" y="276" fill="#555" font-size="9" font-family="sans-serif">Apr</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVIZI ─── -->
+<section id="servizi" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="section-label">Cosa Facciamo</p>
+      <h2 class="section-title">Non solo siti web.<br />Soluzioni che <span class="accent">portano clienti</span>.</h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card animate-in">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Sito Web Vetrina</h3>
+        <p>Siti professionali che convertono visitatori in clienti, ottimizzati per mobile e velocità.</p>
+      </div>
+
+      <div class="service-card animate-in">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>SEO &amp; Google My Business</h3>
+        <p>Ti facciamo trovare su Google. Ottimizzazione locale per portare clienti dalla ricerca al tuo negozio.</p>
+      </div>
+
+      <div class="service-card animate-in">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Menù Digitale &amp; QR</h3>
+        <p>Menù aggiornabile in tempo reale dal telefono. Basta ristampe ogni volta che cambi un prezzo.</p>
+      </div>
+
+      <div class="service-card animate-in">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Prenotazioni Online</h3>
+        <p>I tuoi clienti prenotano alle 2 di notte dal divano. Zero telefonate perse durante il servizio.</p>
+      </div>
+
+      <div class="service-card animate-in">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Dashboard &amp; Report</h3>
+        <p>Saprai esattamente quanti clienti ti porta il sito ogni mese, con report chiari e leggibili.</p>
+      </div>
+
+      <div class="service-card animate-in">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>WhatsApp Business</h3>
+        <p>Un tap e il cliente ti scrive su WhatsApp con messaggio precompilato. Zero attrito, massima conversione.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROCESSO ─── -->
+<section id="processo" class="section">
+  <div class="section-inner-sm">
+    <div class="section-head">
+      <p class="section-label">Il Nostro Processo</p>
+      <h2 class="section-title">Dal briefing al lancio<br />in <span class="accent">7 giorni</span></h2>
+    </div>
+    <div>
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
+            <h3>Briefing</h3>
+            <span class="process-tag">Giorno 1</span>
+          </div>
+          <p>Ci racconti la tua attività in 30 minuti. Noi capiamo cosa ti serve davvero.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
+            <h3>Design &amp; Sviluppo</h3>
+            <span class="process-tag">Giorni 2–5</span>
+          </div>
+          <p>Creiamo il tuo sito con tecnologie all'avanguardia. Veloce, bello, che converte.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
+            <h3>Revisione</h3>
+            <span class="process-tag">Giorni 5–6</span>
+          </div>
+          <p>Ti mostriamo il risultato. Aggiustiamo ogni dettaglio fino a quando non è perfetto.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
+            <h3>Lancio</h3>
+            <span class="process-tag">Giorno 7</span>
+          </div>
+          <p>Mettiamo online il sito, configuriamo analytics e Google. Sei operativo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PERCHÉ CROMOBYTE ─── -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="section-label">Perché Cromobyte</p>
+      <h2 class="section-title">Cosa ci rende <span class="accent">diversi</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card animate-in">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <h3>Velocità</h3>
+        <p>7 giorni, non 7 settimane. Usiamo tecnologie all'avanguardia per consegnare prima senza sacrificare la qualità.</p>
+      </div>
+      <div class="why-card animate-in">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <h3>Risultati Misurabili</h3>
+        <p>Ogni sito ha analytics. Saprai esattamente quanti clienti ti porta il sito, ogni mese. Dati, non promesse.</p>
+      </div>
+      <div class="why-card animate-in">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>GDPR Compliant</h3>
+        <p>Privacy policy, cookie banner, tutto a norma. Niente multe, niente problemi. Ci pensiamo noi.</p>
+      </div>
+      <div class="why-card animate-in">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3>Modifica da Solo</h3>
+        <p>Non sei ostaggio del web designer. Puoi cambiare menù, prezzi e testi in autonomia, quando vuoi.</p>
+      </div>
+      <div class="why-card animate-in">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h3>Supporto Reale</h3>
+        <p>Rispondiamo entro 48h, sempre. Niente ticket infiniti o chatbot. Persone vere che risolvono problemi veri.</p>
+      </div>
+      <div class="why-card animate-in">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <h3>Performance</h3>
+        <p>PageSpeed 90+, mobile-first, SEO ottimizzato. I tuoi concorrenti con siti lenti ti invidieranno.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── RECENSIONI ─── -->
+<section class="section section-alt" id="recensioni">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="section-label">Cosa dicono i clienti</p>
+      <h2 class="section-title" style="font-size:clamp(28px,4vw,38px);">Risultati reali, <span class="accent">parole vere</span></h2>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="simple-review animate-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="simple-quote">"In 7 giorni avevo il sito online. Già le prime settimane ho ricevuto richieste di preventivo tramite il form. Professionalità e velocità incredibili."</p>
+        <p class="simple-attr">— Titolare falegnameria, Milano</p>
+      </div>
+
+      <div class="simple-review animate-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="simple-quote">"Finalmente un sito che rispecchia davvero la nostra attività. Il pannello per modificare i contenuti è semplicissimo, lo usiamo ogni giorno senza problemi."</p>
+        <p class="simple-attr">— Avvocato, Studio legale, Roma</p>
+      </div>
+
+      <div class="simple-review animate-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="simple-quote">"Da quando abbiamo il nuovo sito le prenotazioni online sono aumentate del 60%. Hanno capito esattamente cosa volevamo senza perdersi in dettagli inutili."</p>
+        <p class="simple-attr">— Ristoratore, Torino</p>
+      </div>
+
+      <div class="simple-review animate-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="simple-quote">"Supporto sempre presente e reattivo. Ogni modifica richiesta viene gestita in poche ore. Vale ogni centesimo investito, consigliatissimo."</p>
+        <p class="simple-attr">— Titolare centro estetico, Napoli</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section id="faq" class="section">
+  <div class="section-inner-xs">
+    <div class="section-head">
+      <p class="section-label">Domande Frequenti</p>
+      <h2 class="section-title" style="font-size:clamp(28px,4vw,36px);">Hai dubbi? Rispondiamo.</h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Quanto tempo serve per avere il sito pronto?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>In media 7 giorni lavorativi per un sito Starter, 10–12 per Business e 15 per Premium. Lavoriamo velocemente perché usiamo tecnologie all'avanguardia e processi ottimizzati.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Posso modificare il sito da solo dopo la consegna?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Assolutamente sì. Con i pacchetti Business e Premium avrai un pannello semplicissimo (o anche un semplice foglio Google condiviso) dove puoi cambiare testi, prezzi, foto e menù senza alcuna competenza tecnica.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Cosa succede se non ho foto professionali?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Ti guidiamo su come scattare foto efficaci con il telefono. Inoltre ottimizziamo ogni immagine per il web. Se necessario, possiamo utilizzare foto stock professionali incluse nel prezzo.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Il sito sarà visibile su Google?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Ogni sito è ottimizzato per i motori di ricerca (SEO). Con i pacchetti Business e Premium configuriamo anche il tuo profilo Google My Business, fondamentale per farsi trovare nelle ricerche locali.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Devo pagare tutto subito?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>No. Chiediamo il 50% alla firma del contratto e il restante 50% alla consegna del sito approvato. Nessuna sorpresa.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <p>Cosa include la manutenzione mensile?</p>
+        <span class="faq-chevron">&#8964;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Hosting, backup, aggiornamenti di sicurezza e supporto. Con i piani Pro e Crescita hai anche modifiche illimitate e report mensili. Puoi disdire in qualsiasi momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="section section-alt">
+  <div class="cta-box">
+    <h2>Pronto a portare la tua<br />attività online?</h2>
+    <p>Raccontaci della tua attività. Ti mostriamo cosa possiamo creare per te — senza impegno, senza costi.</p>
+    <a href="contatti.html" class="btn-primary">Prenota una Consulenza Gratuita →</a>
+  </div>
+</section>
+
+<!-- ─── DATI AZIENDALI ─── -->
+<div class="dati-section">
+  <div class="dati-inner">
+    <h3>Dati Aziendali</h3>
+    <div>
+      <p><strong>Cromobyte</strong></p>
+      <p>Titolare: Antonio Corsello</p>
+      <p>Sede: Rivoli (TO)</p>
+      <p>Email: contatti@cromobyte.it</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer id="footer-privacy">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="Logo.png.png" alt="Cromobyte" height="39">
+      </a>
+      <div class="footer-links">
+        <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Privacy Policy</a>
+        <a href="#" onclick="manageCookies();return false;">Gestisci Cookie</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Cromobyte</p>
+      <p>Questo sito utilizza cookie tecnici e, previo consenso, analitici. <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Info</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── COOKIE BANNER ─── -->
+<div class="cookie-banner" id="cookieBanner" style="display:none;">
+  <div class="cookie-inner">
+    <p class="cookie-title">Questo sito utilizza i cookie</p>
+    <p class="cookie-text">Utilizziamo cookie per migliorare la tua esperienza. Puoi scegliere quali accettare. <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Privacy Policy</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-btn reject" onclick="saveCookies({necessary:true,analytics:false,marketing:false})">Rifiuta tutti</button>
+      <button class="cookie-btn custom" onclick="document.getElementById('privacyModal').classList.add('open')">Personalizza</button>
+      <button class="cookie-btn accept" onclick="saveCookies({necessary:true,analytics:true,marketing:true})">Accetta tutti</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PRIVACY MODAL ─── -->
+<div class="modal-overlay" id="privacyModal" onclick="this.classList.remove('open')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="document.getElementById('privacyModal').classList.remove('open')">✕</button>
+    <h2>Privacy Policy</h2>
+    <div>
+      <h3>1. Titolare del Trattamento</h3>
+      <p><strong>Cromobyte</strong><br/>Sede legale: Rivoli (TO)<br/>Email: contatti@cromobyte.it</p>
+      <h3>2. Dati Raccolti</h3>
+      <p>Dati di navigazione (IP, browser, pagine visitate), dati forniti volontariamente tramite form di contatto (nome, email, telefono, messaggio), cookie tecnici e, previo consenso, cookie analitici e di marketing.</p>
+      <h3>3. Finalità e Base Giuridica</h3>
+      <p>I dati sono trattati per: rispondere alle richieste (Art. 6.1.b GDPR), garantire sicurezza del sito (Art. 6.1.f), invio comunicazioni promozionali previo consenso (Art. 6.1.a), obblighi fiscali (Art. 6.1.c).</p>
+      <h3>4. Cookie</h3>
+      <table class="privacy-table">
+        <thead><tr><th>Cookie</th><th>Tipo</th><th>Durata</th><th>Scopo</th></tr></thead>
+        <tbody>
+          <tr><td>cromobyte_consent</td><td>Tecnico</td><td>180 giorni</td><td>Preferenze cookie</td></tr>
+          <tr><td>_ga, _ga_*</td><td>Analitico</td><td>24 mesi</td><td>Statistiche (previo consenso)</td></tr>
+        </tbody>
+      </table>
+      <h3>5. Conservazione</h3>
+      <p>Dati di contatto: max 12 mesi. Dati di navigazione: max 24 mesi. Dati fiscali: 10 anni.</p>
+      <h3>6. Diritti dell'Interessato</h3>
+      <p>Ai sensi degli Art. 15-22 GDPR hai diritto di accesso, rettifica, cancellazione, limitazione, portabilità, opposizione e revoca del consenso. Scrivi a contatti@cromobyte.it.</p>
+      <h3>7. Reclamo</h3>
+      <p>Puoi proporre reclamo al Garante per la Protezione dei Dati Personali — Piazza Venezia 11, 00187 Roma — www.garanteprivacy.it</p>
+    </div>
+  </div>
+</div>
+
+<div id="fireworkLayer" style="position:fixed;inset:0;pointer-events:none;z-index:9999;"></div>
+
+<script>
+  // Year
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+  // Navbar scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Active nav link — click + scroll tracking
+  (function() {
+    const links = document.querySelectorAll('#navLinks a');
+    const sectionIds = ['chi-siamo', 'servizi', 'processo', 'faq'];
+
+    function setActive(href) {
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === href));
+    }
+
+    links.forEach(a => {
+      a.addEventListener('click', () => setActive(a.getAttribute('href')));
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const match = Array.from(links).find(a => a.getAttribute('href') === 'index.html#' + entry.target.id);
+          if (match) setActive(match.getAttribute('href'));
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) sectionObserver.observe(el);
+    });
+  })();
+
+  // Mobile menu
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  // Cookie helpers
+  function saveCookies(prefs) {
+    localStorage.setItem('cromobyte_consent', JSON.stringify(prefs));
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  function manageCookies() {
+    localStorage.removeItem('cromobyte_consent');
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+  if (!localStorage.getItem('cromobyte_consent')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+
+  // Counter animation
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const duration = 2000;
+    let start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      el.textContent = Math.floor(progress * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Intersection Observer for animations + counters
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // trigger counters when stats bar is visible
+        if (entry.target.id === 'statsBar') {
+          entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.animate-in, .animate-left, .animate-right, .process-step, #statsBar').forEach(el => observer.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Process steps stagger
+  document.querySelectorAll('.process-step').forEach((el, i) => {
+    el.style.transitionDelay = (i * 100) + 'ms';
+  });
+
+  // Service cards stagger
+  document.querySelectorAll('.service-card').forEach((el, i) => {
+    el.style.transitionDelay = (i * 80) + 'ms';
+  });
+
+  // ── FIREWORK on "Richiedi Preventivo" ──
+  const FIREWORK_COLORS = ['#FF6B6B','#4ECDC4','#45B7D1','#FFA07A','#FFD93D','#6BCF7F','#C77DFF','#FF6B9D','#4D96FF','#00f0ff'];
+  function launchFirework(x, y) {
+    const layer = document.getElementById('fireworkLayer');
+    for (let i = 0; i < 48; i++) {
+      const p = document.createElement('div');
+      const angle = (Math.PI * 2 * i) / 48;
+      const v = 70 + Math.random() * 130;
+      const size = 5 + Math.random() * 6;
+      const color = FIREWORK_COLORS[i % FIREWORK_COLORS.length];
+      p.style.cssText = `position:absolute;left:${x}px;top:${y}px;width:${size}px;height:${size}px;border-radius:50%;background:${color};box-shadow:0 0 ${size*2}px ${color};pointer-events:none;transition:transform 0.7s ease-out,opacity 0.7s ease-out;`;
+      layer.appendChild(p);
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        p.style.transform = `translate(${Math.cos(angle)*v}px,${Math.sin(angle)*v}px) scale(0)`;
+        p.style.opacity = '0';
+      }));
+      setTimeout(() => p.remove(), 800);
+    }
+  }
+
+  document.querySelectorAll('a.nav-cta').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      const r = e.currentTarget.getBoundingClientRect();
+      launchFirework(r.left + r.width / 2, r.top + r.height / 2);
+      const href = e.currentTarget.href;
+      setTimeout(() => { window.location.href = href; }, 700);
+    });
+  });
+  // mobile menu Richiedi Preventivo
+  document.querySelectorAll('.mobile-menu a').forEach(el => {
+    if (el.textContent.trim() === 'Richiedi Preventivo') {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        const r = e.currentTarget.getBoundingClientRect();
+        launchFirework(r.left + r.width / 2, r.top + r.height / 2);
+        const href = e.currentTarget.href;
+        setTimeout(() => { window.location.href = href; }, 700);
+      });
+    }
+  });
+
+  // ── WebGL SHADER in Chi Siamo (lazy Three.js) ──
+  function initChiShader(canvas) {
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setClearColor(0x000000, 0);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, -1);
+    const uniforms = {
+      resolution: { value: new THREE.Vector2(canvas.offsetWidth, canvas.offsetHeight) },
+      time: { value: 0.0 }
+    };
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(
+      new Float32Array([-1,-1,0, 1,-1,0, -1,1,0, 1,-1,0, -1,1,0, 1,1,0]), 3
+    ));
+    const mat = new THREE.RawShaderMaterial({
+      vertexShader: `attribute vec3 position; void main(){ gl_Position = vec4(position, 1.0); }`,
+      fragmentShader: `
+        precision highp float;
+        uniform vec2 resolution;
+        uniform float time;
+        void main(){
+          vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+          float d = length(p) * 0.05;
+          float r = 0.05 / abs(p.y + sin((p.x * (1.0 + d) + time) * 1.0) * 0.5);
+          float g = 0.05 / abs(p.y + sin((p.x + time) * 1.0) * 0.5);
+          float b = 0.05 / abs(p.y + sin((p.x * (1.0 - d) + time) * 1.0) * 0.5);
+          gl_FragColor = vec4(r, g, b, 1.0);
+        }`,
+      uniforms,
+      side: THREE.DoubleSide
+    });
+    scene.add(new THREE.Mesh(geo, mat));
+    const section = document.getElementById('chi-siamo');
+    const resize = () => {
+      const w = section.offsetWidth, h = section.offsetHeight;
+      renderer.setSize(w, h, false);
+      uniforms.resolution.value.set(w, h);
+    };
+    resize();
+    window.addEventListener('resize', resize);
+    (function animate() {
+      uniforms.time.value += 0.008;
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    })();
+  }
+
+  const chiSiamoCanvas = document.getElementById('chiSiamoCanvas');
+  const chiObserver = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) return;
+    chiObserver.disconnect();
+    if (window.THREE) {
+      initChiShader(chiSiamoCanvas);
+    } else {
+      const s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js';
+      s.onload = () => initChiShader(chiSiamoCanvas);
+      document.head.appendChild(s);
+    }
+  }, { threshold: 0.1 });
+  if (document.getElementById('chi-siamo')) {
+    chiObserver.observe(document.getElementById('chi-siamo'));
+  }
+
+  // ── SCROLLYTELLING LOGIC ──
+  (function() {
+    const FRAME_COUNT = 192;
+    const images = [];
+    const loader = document.getElementById('scrolly-loader');
+    const progressBar = document.getElementById('scrolly-progress');
+    const canvas = document.getElementById('scrolly-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const heroSection = document.getElementById('scrolly-hero');
+    const indicator = document.getElementById('scrolly-indicator');
+
+    const beats = [
+      { el: document.getElementById('beat-a'), range: [0, 0, 0.15, 0.20] },
+      { el: document.getElementById('beat-b'), range: [0.25, 0.30, 0.40, 0.45] },
+      { el: document.getElementById('beat-c'), range: [0.50, 0.55, 0.70, 0.75] },
+      { el: document.getElementById('beat-d'), range: [0.80, 0.85, 1.0, 1.0] }
+    ];
+
+    let loadedCount = 0;
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      renderFrame(Math.floor(currentProgress * (FRAME_COUNT - 1)));
+    }
+    window.addEventListener('resize', resizeCanvas);
+
+    // Preload
+    for (let i = 0; i < FRAME_COUNT; i++) {
+      const img = new Image();
+      const numStr = i.toString().padStart(3, '0');
+      img.src = `frame_${numStr}_delay-0.041s.jpg`;
+      img.onload = () => {
+        loadedCount++;
+        if (progressBar) progressBar.style.width = (loadedCount / FRAME_COUNT) * 100 + '%';
+        if (loadedCount === 1) {
+          resizeCanvas();
+          updateScroll();
+          setTimeout(() => { if (loader) loader.classList.add('hidden'); }, 200);
+        }
+      };
+      images.push(img);
+    }
+
+    function renderFrame(index) {
+      if (!images[index] || !images[index].complete) return;
+      const img = images[index];
+      const cw = canvas.width;
+      const ch = canvas.height;
+      
+      ctx.fillStyle = '#000';
+      ctx.fillRect(0, 0, cw, ch);
+      
+      const ir = img.width / img.height;
+      const cr = cw / ch;
+      let w, h, x, y;
+      
+      if (cr > ir) {
+        w = cw;
+        h = cw / ir;
+        x = 0;
+        y = (ch - h) / 2;
+      } else {
+        w = ch * ir;
+        h = ch;
+        x = (cw - w) / 2;
+        y = 0;
+      }
+      
+      ctx.drawImage(img, x, y, w, h);
+    }
+
+    function lerp(start, end, amt) {
+      return (1 - amt) * start + amt * end;
+    }
+
+    let currentProgress = 0;
+    let targetProgress = 0;
+
+    function updateScroll() {
+      const rect = heroSection.getBoundingClientRect();
+      const scrollY = window.scrollY;
+      const sectionTop = rect.top + scrollY;
+      const sectionHeight = rect.height;
+      const windowHeight = window.innerHeight;
+      
+      let rawProgress = (scrollY - sectionTop) / (sectionHeight - windowHeight);
+      rawProgress = Math.max(0, Math.min(1, rawProgress));
+      targetProgress = rawProgress;
+      
+      if (indicator) {
+        if (rawProgress > 0.02) {
+          indicator.classList.add('hidden');
+        } else {
+          indicator.classList.remove('hidden');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', updateScroll, { passive: true });
+
+    let lastFrameIndex = -1;
+
+    function tick() {
+      currentProgress += (targetProgress - currentProgress) * 0.1;
+      
+      const frameIndex = Math.floor(currentProgress * (FRAME_COUNT - 1));
+      if (frameIndex !== lastFrameIndex) {
+        renderFrame(frameIndex);
+        lastFrameIndex = frameIndex;
+      }
+
+      beats.forEach(beat => {
+        if (!beat.el) return;
+        const [s1, s2, s3, s4] = beat.range;
+        let opacity = 0;
+        let y = 30;
+        
+        if (currentProgress < s1) {
+          opacity = 0;
+          y = 30;
+        } else if (currentProgress >= s1 && currentProgress < s2) {
+          const t = (currentProgress - s1) / (s2 - s1);
+          opacity = t;
+          y = lerp(30, 0, t);
+        } else if (currentProgress >= s2 && currentProgress <= s3) {
+          opacity = 1;
+          y = 0;
+        } else if (currentProgress > s3 && currentProgress <= s4) {
+          const t = (currentProgress - s3) / (s4 - s3);
+          opacity = 1 - t;
+          y = lerp(0, -30, t);
+        } else {
+          opacity = 0;
+          y = -30;
+        }
+        
+        if (s1 === s2 && currentProgress <= s1) { opacity = 1; y = 0; }
+        if (s3 === s4 && currentProgress >= s4) { opacity = 1; y = 0; }
+
+        beat.el.style.opacity = opacity;
+        
+        if (opacity === 0) {
+          beat.el.style.pointerEvents = 'none';
+        } else {
+          beat.el.style.pointerEvents = 'none'; // container ignores clicks
+          
+          let transformStr = `translate(-50%, calc(-50% + ${y}px))`;
+          if (beat.el.classList.contains('align-left') || beat.el.classList.contains('align-right')) {
+            transformStr = `translate(0, calc(-50% + ${y}px))`;
+            if (window.innerWidth <= 768) {
+               transformStr = `translate(-50%, calc(-50% + ${y}px))`;
+            }
+          }
+          beat.el.style.transform = transformStr;
+        }
+      });
+
+      requestAnimationFrame(tick);
+    }
+    
+    requestAnimationFrame(tick);
+  })();
+</script>
+
+</body>
+</html>
