@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cromobyte — Siti Web per PMI Italiane</title>
   <meta name="description" content="Trasformiamo la tua presenza digitale. Siti web professionali in 7 giorni. Veloci, belli, che convertono." />
+  <link rel="icon" type="image/png" href="Logo.png.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="frame_000_delay-0.041s.jpg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -268,17 +270,6 @@
   </div>
 </section>
 
-<!-- ─── SOCIAL PROOF ─── -->
-<div class="proof-strip">
-  <div style="max-width:900px;margin:0 auto;text-align:center;">
-    <div class="stars">★★★★★</div>
-    <p style="font-size:18px;color:#ccc;font-style:italic;line-height:1.6;max-width:600px;margin:0 auto 12px;">
-      "In 7 giorni avevamo un sito che i nostri clienti ci fanno i complimenti. Le prenotazioni online ci hanno cambiato la vita."
-    </p>
-    <p style="font-size:13px;color:#666;">— Ristorante cliente, Torino</p>
-  </div>
-</div>
-
 <!-- ─── PROCESSO ─── -->
 <section id="processo" class="section">
   <div class="section-inner-sm">
@@ -495,12 +486,9 @@
     <h3>Dati Aziendali</h3>
     <div>
       <p><strong>Cromobyte</strong></p>
-      <p>Titolare: [NOME_COGNOME]</p>
-      <p>Sede: [INDIRIZZO]</p>
-      <p>P.IVA: [P_IVA]</p>
-      <p>Codice Fiscale: [CODICE_FISCALE]</p>
-      <p>PEC: [PEC]</p>
-      <p>Email: [EMAIL]</p>
+      <p>Titolare: Antonio Corsello</p>
+      <p>Sede: Rivoli (TO)</p>
+      <p>Email: contatti@cromobyte.it</p>
     </div>
   </div>
 </div>
@@ -518,7 +506,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="footerYear"></span> Cromobyte — P.IVA [P_IVA]</p>
+      <p>© <span id="footerYear"></span> Cromobyte</p>
       <p>Questo sito utilizza cookie tecnici e, previo consenso, analitici. <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');return false;">Info</a></p>
     </div>
   </div>
@@ -543,9 +531,8 @@
     <button class="modal-close" onclick="document.getElementById('privacyModal').classList.remove('open')">✕</button>
     <h2>Privacy Policy</h2>
     <div>
-      <p><em>Ultimo aggiornamento: [DATA_AGGIORNAMENTO]</em></p>
       <h3>1. Titolare del Trattamento</h3>
-      <p><strong>[NOME_AZIENDA]</strong><br/>Sede legale: [INDIRIZZO]<br/>P.IVA: [P_IVA]<br/>Email: [EMAIL_PRIVACY]</p>
+      <p><strong>Cromobyte</strong><br/>Sede legale: Rivoli (TO)<br/>Email: contatti@cromobyte.it</p>
       <h3>2. Dati Raccolti</h3>
       <p>Dati di navigazione (IP, browser, pagine visitate), dati forniti volontariamente tramite form di contatto (nome, email, telefono, messaggio), cookie tecnici e, previo consenso, cookie analitici e di marketing.</p>
       <h3>3. Finalità e Base Giuridica</h3>
@@ -561,7 +548,7 @@
       <h3>5. Conservazione</h3>
       <p>Dati di contatto: max 12 mesi. Dati di navigazione: max 24 mesi. Dati fiscali: 10 anni.</p>
       <h3>6. Diritti dell'Interessato</h3>
-      <p>Ai sensi degli Art. 15-22 GDPR hai diritto di accesso, rettifica, cancellazione, limitazione, portabilità, opposizione e revoca del consenso. Scrivi a [EMAIL_PRIVACY].</p>
+      <p>Ai sensi degli Art. 15-22 GDPR hai diritto di accesso, rettifica, cancellazione, limitazione, portabilità, opposizione e revoca del consenso. Scrivi a contatti@cromobyte.it.</p>
       <h3>7. Reclamo</h3>
       <p>Puoi proporre reclamo al Garante per la Protezione dei Dati Personali — Piazza Venezia 11, 00187 Roma — www.garanteprivacy.it</p>
     </div>
@@ -825,12 +812,10 @@
       img.onload = () => {
         loadedCount++;
         if (progressBar) progressBar.style.width = (loadedCount / FRAME_COUNT) * 100 + '%';
-        if (loadedCount === FRAME_COUNT) {
-          setTimeout(() => {
-            if (loader) loader.classList.add('hidden');
-            resizeCanvas();
-            updateScroll();
-          }, 300);
+        if (loadedCount === 1) {
+          resizeCanvas();
+          updateScroll();
+          setTimeout(() => { if (loader) loader.classList.add('hidden'); }, 200);
         }
       };
       images.push(img);
