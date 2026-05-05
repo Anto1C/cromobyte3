@@ -10,32 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ─── HERO ─── */
-.hero-section {
-  min-height: 100vh; display: flex; align-items: center; justify-content: center;
-  position: relative; padding: 120px 24px 80px; overflow: hidden;
-}
-.hero-glow {
-  position: absolute; border-radius: 50%; pointer-events: none;
-  animation: float 8s ease-in-out infinite;
-}
-.hero-glow-1 {
-  top: 10%; left: 5%; width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(0,240,255,.06) 0%, transparent 70%);
-  filter: blur(80px);
-}
-.hero-glow-2 {
-  bottom: 10%; right: 5%; width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(0,100,255,.04) 0%, transparent 70%);
-  filter: blur(60px); animation-duration: 10s; animation-delay: 2s;
-}
-.hero-grid {
-  position: absolute; inset: 0; pointer-events: none;
-  background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
-  background-size: 80px 80px;
-}
-.hero-content { max-width: 900px; text-align: center; position: relative; z-index: 1; }
 
 /* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar { width: 6px; }
@@ -47,7 +21,7 @@ body {
 @keyframes slideUp   { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
 @keyframes fadeIn    { from { opacity:0; } to { opacity:1; } }
 @keyframes float     { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-12px); } }
-@keyframes gradientMove { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
+
 
 .animate-in    { opacity:0; transform:translateY(40px);   transition: opacity .6s ease, transform .6s ease; }
 .animate-left  { opacity:0; transform:translateX(-40px);  transition: opacity .8s ease, transform .8s ease; }
@@ -403,7 +377,6 @@ textarea.form-input { resize:vertical; }
   border-bottom:1px solid rgba(255,255,255,.04);
 }
 .stars { display:flex; justify-content:center; gap:4px; margin-bottom:12px; }
-.star { color:#00f0ff; font-size:20px; }
 
 /* ─── FOOTER ─── */
 footer {
@@ -460,7 +433,7 @@ footer {
 .modal-overlay {
   position:fixed; inset:0; z-index:10001;
   background:rgba(0,0,0,.8); backdrop-filter:blur(8px);
-  display:flex; align-items:center; justify-content:center;
+  align-items:center; justify-content:center;
   padding:20px; overflow:auto; display:none;
 }
 .modal-overlay.open { display:flex; }
@@ -480,8 +453,6 @@ footer {
 /* ─── RESPONSIVE ─── */
 @media (max-width:768px) {
   .section { padding:70px 24px; }
-  .hero-btns { flex-direction:column; align-items:stretch; }
-  .hero-btns .btn-primary, .hero-btns .btn-secondary { justify-content:center; }
   .chi-siamo-grid { flex-direction:column !important; }
   .pricing-cards { flex-direction:column; align-items:center; }
   .pricing-card  { max-width:100%; }
@@ -574,29 +545,6 @@ footer {
 }
 
 /* Typography for Beats */
-.hero-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(36px, 6vw, 72px);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -2px;
-  margin-bottom: 24px;
-}
-.accent-gradient {
-  background: linear-gradient(135deg, #00f0ff, #0080ff, #00f0ff);
-  background-size: 200% 200%;
-  animation: gradientMove 4s ease infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-subtitle {
-  font-size: clamp(16px, 2vw, 20px);
-  color: #888;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
 .beat-title {
   font-family: 'Syne', sans-serif;
   font-size: clamp(32px, 5vw, 56px);
